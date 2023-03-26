@@ -36,11 +36,11 @@ This repository contains the following:
 
 * Image files of the dashboard created as follows: 
 
-* * [Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_ratings.jpg)
+  * [Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_ratings.jpg)
 
-* * [Transfer Values](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_values.jpg) 
+  * [Transfer Values](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_values.jpg) 
 
-* * [Potential Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_potential.jpg)
+  * [Potential Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_potential.jpg)
 
 ## **Challenges**
 
