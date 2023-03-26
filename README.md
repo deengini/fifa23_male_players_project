@@ -32,15 +32,15 @@ This repository contains the following:
 
 * A report of the entire cleaning process and all necessary documentation (still to be written)
 
-* A Power BI file of the dashboard created. 
+* A Power BI [document](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players.pbix) of the dashboard created. 
 
 * Image files of the dashboard created as follows: 
 
-* * Ratings
+* * [Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_ratings.jpg)
 
-* * Transfer Values 
+* * [Transfer Values](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_values.jpg) 
 
-* * Potential Ratings 
+* * [Potential Ratings](https://github.com/deengini/fifa23_male_players_project/blob/main/FIFA23_male_players_potential.jpg)
 
 ## **Challenges**
 
