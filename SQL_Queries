@@ -1,0 +1,109 @@
+Ratings Queries
+
+# MALE_OVERALL_RATING
+# Top 10 Highest Rated Players in FIFA 23
+SELECT p.player_id as id, 
+  p.long_name as name,
+  p.age as name,
+  p.overall as overall,
+  t.team_name as club, 
+  t.league_name as league
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+ORDER BY p.overall DESC
+LIMIT 10
+
+# Age vs Rating 
+SELECT p.age as age,
+  p.overall as overall
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+ORDER BY p.overall DESC
+
+# Age with Highest Rated Players 
+SELECT p.age as age,
+  COUNT(p.age) as age_frequency
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+WHERE p.overall >=85
+GROUP BY p.overall, p.age
+ORDER BY age_frequency DESC
+
+# Leagues with the highest number of superstars or highest rated players in FIFA 23
+SELECT t.league_name, 
+  COUNT(p.overall) as num_stars
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+WHERE p.overall >= 85
+GROUP BY t.league_name
+ORDER BY num_stars DESC
+
+
+Transfer Values Queries
+
+# MALE_VALUE
+# Top 10 Highest Valued Players in FIFA 23
+SELECT p.player_id as id, 
+  p.long_name as name,
+  p.age,
+  p.value_eur as transfer_value,
+  t.team_name as club, 
+  t.league_name as league
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+ORDER BY p.value_eur DESC
+LIMIT 10
+
+# Transfer Value vs Overall Rating
+SELECT p.value_eur as transfer_value,
+  p.overall as overall
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+ORDER BY transfer_value DESC, overall DESC
+
+# Leagues with the most expensive players in FIFA 23
+SELECT t.league_name as league, 
+  COUNT(p.value_eur) as value_frequency
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+WHERE p.value_eur >= 50000000
+GROUP BY t.league_name
+ORDER BY value_frequency DESC
+
+
+Potentials Queries
+
+# MALE_POTENTIAL 
+# Top 10 Highest Potential Players in FIFA 23
+SELECT p.player_id as id, 
+  p.long_name as name,
+  p.age as age,
+  p.potential as potential,
+  t.team_name as club_team, 
+  t.league_name
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+ORDER BY p.potential DESC
+LIMIT 10
+
+# Age vs Potential 
+SELECT p.age,
+  p.potential as potential
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+ORDER BY p.potential DESC
+
+# Leagues with the highest potential players in FIFA 23
+SELECT t.league_name, 
+  COUNT(p.potential) as num_pot_stars
+FROM `dataproject-1-381112.fifa_23_male_data.male_players` as p
+JOIN `dataproject-1-381112.fifa_23_male_data.male_teams` as t ON
+p.club_team_id = t.team_id
+WHERE p.age < 21 
+  AND p.potential >= 85
+GROUP BY t.league_name
+ORDER BY num_pot_stars DESC
+
