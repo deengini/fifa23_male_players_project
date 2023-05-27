@@ -1,6 +1,8 @@
-# fifa23_male_players_project
+# **FIFA 23: Analyzing Male Player Statistics**
 
-## **Date: March 19, 2023**
+![screenshot](fifa_logo.png)
+
+## **Status:** Completed (March 19, 2023)
 
 ## **Project Description**
 
